@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import KnowYourBody from './KnowYourBody'
 
 const questions = [
   {
@@ -49,7 +50,7 @@ const questions = [
   },
 ]
 
-export default function Quiz() {
+function KnowledgeQuiz() {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState(null)
@@ -176,4 +177,36 @@ function btnStyle(bg, color) {
     padding: '14px 16px', fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer',
     textAlign: 'left',
   }
+}
+
+export default function Quiz() {
+  const [tab, setTab] = useState('knowledge')
+
+  return (
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+      {/* Tab bar */}
+      <div style={{ display: 'flex', borderBottom: '1px solid #E0DED8', background: '#FAF9F7', flexShrink: 0 }}>
+        {[
+          { id: 'knowledge', label: 'Test your knowledge' },
+          { id: 'body', label: 'Know your body' },
+        ].map(t => (
+          <button
+            key={t.id}
+            onClick={() => setTab(t.id)}
+            style={{
+              flex: 1, padding: '12px 8px', border: 'none', background: 'none', cursor: 'pointer',
+              fontWeight: tab === t.id ? 900 : 600, fontSize: '0.8rem',
+              color: tab === t.id ? '#EF4136' : '#888780',
+              borderBottom: tab === t.id ? '2.5px solid #EF4136' : '2.5px solid transparent',
+              fontFamily: 'Nunito, sans-serif',
+            }}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      {tab === 'knowledge' ? <KnowledgeQuiz /> : <KnowYourBody />}
+    </div>
+  )
 }

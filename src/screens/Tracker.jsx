@@ -1,6 +1,69 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+const benchmarks = [
+  { key: 'rr_benchmark_neck', label: 'Deep Neck Flexors', unit: 's', quizTab: 'body' },
+  { key: 'rr_benchmark_plank', label: 'Front Plank', unit: 's', quizTab: 'body' },
+  { key: 'rr_benchmark_sideplank_left', label: 'Side Plank — Left', unit: 's', quizTab: 'body' },
+  { key: 'rr_benchmark_sideplank_right', label: 'Side Plank — Right', unit: 's', quizTab: 'body' },
+  { key: 'rr_benchmark_balance_left', label: 'Balance Eyes Closed — Left', unit: 's', quizTab: 'body' },
+  { key: 'rr_benchmark_balance_right', label: 'Balance Eyes Closed — Right', unit: 's', quizTab: 'body' },
+  { key: 'rr_benchmark_sts_double', label: 'Sit to Stand — Double leg', unit: 'reps', quizTab: 'body' },
+  { key: 'rr_benchmark_sts_left', label: 'Sit to Stand — Left', unit: 'reps', quizTab: 'body' },
+  { key: 'rr_benchmark_sts_right', label: 'Sit to Stand — Right', unit: 'reps', quizTab: 'body' },
+  { key: 'rr_benchmark_bridge_left', label: 'Single Leg Bridge — Left', unit: 's', quizTab: 'body' },
+  { key: 'rr_benchmark_bridge_right', label: 'Single Leg Bridge — Right', unit: 's', quizTab: 'body' },
+]
+
+function fmt(s) { return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}` }
+
+function getBenchmarkResults(key) {
+  const keys = Object.keys(localStorage).filter(k => k.startsWith(key + '_')).sort().reverse()
+  if (keys.length === 0) return null
+  const latest = keys[0]
+  const prev = keys[1]
+  const date = latest.replace(key + '_', '')
+  const value = parseInt(localStorage.getItem(latest))
+  const days = Math.floor((Date.now() - new Date(date).getTime()) / 86400000)
+  let trend = null
+  if (prev) {
+    const prevVal = parseInt(localStorage.getItem(prev))
+    trend = value > prevVal ? '↑' : value < prevVal ? '↓' : '→'
+  }
+  return { value, days, trend }
+}
+
+function BenchmarkRow({ b, onTap }) {
+  const result = getBenchmarkResults(b.key)
+  const overdue = result && result.days >= 14
+
+  return (
+    <button
+      onClick={onTap}
+      style={{
+        width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '10px 0', borderBottom: '1px solid #E0DED8', background: 'none', border: 'none',
+        borderBottom: '1px solid #E0DED8', cursor: 'pointer', textAlign: 'left',
+      }}
+    >
+      <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#2C2C2A', flex: 1 }}>{b.label}</span>
+      {!result ? (
+        <span style={{ fontSize: '0.75rem', color: '#888780' }}>Not tested yet →</span>
+      ) : (
+        <div style={{ textAlign: 'right' }}>
+          <span style={{ fontSize: '0.85rem', fontWeight: 800, color: overdue ? '#EF4136' : '#2C2C2A' }}>
+            {b.unit === 'reps' ? `${result.value} reps` : fmt(result.value)}
+            {result.trend && <span style={{ marginLeft: 4 }}>{result.trend}</span>}
+          </span>
+          <div style={{ fontSize: '0.68rem', color: overdue ? '#EF4136' : '#888780' }}>
+            {overdue ? 'Time to retest' : `${result.days}d ago`}
+          </div>
+        </div>
+      )}
+    </button>
+  )
+}
+
 const today = () => new Date().toISOString().split('T')[0]
 
 const areaTrackers = {
@@ -229,10 +292,18 @@ export default function Tracker() {
         </button>
       )}
 
-      <div style={{ background: '#F7F6F2', border: '1px solid #E0DED8', borderRadius: 10, padding: '12px 14px' }}>
+      <div style={{ background: '#F7F6F2', border: '1px solid #E0DED8', borderRadius: 10, padding: '12px 14px', marginBottom: 24 }}>
         <p style={{ color: '#888780', fontSize: '0.78rem', lineHeight: 1.5, margin: 0 }}>
           What to look for: Improving week on week = right track. Same or worsening after 2 weeks = time to see a physio.
         </p>
+      </div>
+
+      <div style={{ borderTop: '2px solid #E0DED8', paddingTop: 20, marginBottom: 8 }}>
+        <div style={{ fontWeight: 900, fontSize: '1rem', color: '#2C2C2A', marginBottom: 4 }}>Your benchmarks</div>
+        <div style={{ fontSize: '0.78rem', color: '#888780', marginBottom: 12 }}>Retest every 2 weeks to track progress.</div>
+        {benchmarks.map(b => (
+          <BenchmarkRow key={b.key} b={b} onTap={() => navigate('/quiz')} />
+        ))}
       </div>
     </div>
   )
