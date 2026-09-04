@@ -21,6 +21,9 @@ import DeskSetup from './screens/DeskSetup'
 import Tracker from './screens/Tracker'
 import Products from './screens/Products'
 import ProductDetail from './screens/ProductDetail'
+import CardDeckHome from './screens/CardDeckHome'
+import CardSection from './screens/CardSection'
+import CardDetail from './screens/CardDetail'
 
 const noNavRoutes = ['/safety']
 const noBackRoutes = ['/', '/safety']
@@ -45,7 +48,7 @@ export default function App() {
   const showNav = !noNavRoutes.includes(location.pathname)
   const showBack = !noBackRoutes.includes(location.pathname)
 
-  const screenTitle = {
+  const staticTitles = {
     '/pain': 'Where is the niggle?',
     '/pain/lower/triage': 'When is it worst?',
     '/pain/neck': 'Neck & Head',
@@ -60,7 +63,11 @@ export default function App() {
     '/tracker': 'Daily check-in',
     '/products': 'Your products',
     '/recheck': 'Quick check',
-  }[location.pathname]
+    '/cards': 'Card deck',
+  }
+
+  const screenTitle = staticTitles[location.pathname] ||
+    (location.pathname.startsWith('/cards/') ? 'Card deck' : undefined)
 
   return (
     <SafetyGuard>
@@ -99,6 +106,9 @@ export default function App() {
             <Route path="/tracker" element={<Tracker />} />
             <Route path="/products" element={<Products />} />
             <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/cards" element={<CardDeckHome />} />
+            <Route path="/cards/:sectionId" element={<CardSection />} />
+            <Route path="/cards/:sectionId/:cardId" element={<CardDetail />} />
           </Routes>
         </div>
 

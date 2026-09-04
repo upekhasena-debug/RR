@@ -15,7 +15,7 @@ The headaches this produces are cervicogenic — they originate in the neck and 
         {
           title: 'Move — start here',
           body: 'Set a timer for every 30-45 minutes. When it goes off, stand up and do a movement card from your deck. For headaches specifically — getting up and moving before the tension builds is far more effective than trying to relieve it once it\'s established.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Movement cards', to: '/cards/move' }],
         },
         {
           title: 'Heat patch — before you start',
@@ -35,17 +35,17 @@ The headaches this produces are cervicogenic — they originate in the neck and 
         {
           title: 'Thoracic mobility',
           body: 'Your thoracic spine directly influences your cervical spine. When the thoracic spine is stiff, the neck compensates. BackMagic at lunch, thoracic mobility drills from your card deck.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', comingSoon: true }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
         },
         {
           title: 'Stretching',
           body: 'Priority order: suboccipital release first, then scalenes, upper traps, pecs.',
-          links: [{ label: 'Neck and head stretching guide', comingSoon: true }],
+          links: [{ label: 'Neck and head stretching guide', to: '/cards/stretch' }],
         },
         {
           title: 'Activation — chin retractions',
           body: 'Gently pull your chin straight back — not down, back. Hold 2 seconds, release. 10 reps. Every hour. This reactivates the deep neck flexors that switch off under sustained forward head posture.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Activation cards', to: '/cards/activate' }],
         },
       ]}
       workSmarterItems={[

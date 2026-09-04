@@ -13,7 +13,7 @@ The mechanism is a combination of sustained forward posture, rounded shoulders, 
         {
           title: 'Move — start here',
           body: 'Set a timer for every 30-45 minutes. When it goes off, stand up and do a movement card from your deck. Upper back tightness responds particularly well to movement — even a 2-minute walk with arms swinging changes the load pattern significantly.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Movement cards', to: '/cards/move' }],
         },
         {
           title: 'Soft tissue release — peanut ball',
@@ -23,17 +23,17 @@ The mechanism is a combination of sustained forward posture, rounded shoulders, 
         {
           title: 'Thoracic mobility',
           body: 'The thoracic spine is the primary driver of this presentation. A stiff thoracic spine is the reason the upper back and shoulders are overloaded. BackMagic at lunch is the most important thing in your box for this area. Thoracic mobility drills from your card deck daily.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', comingSoon: true }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
         },
         {
           title: 'Stretching',
           body: 'Priority order: pecs and pec minor first — doorframe stretch, or pec minor release against the ball. Then upper traps, scalenes.',
-          links: [{ label: 'Upper back stretching guide', comingSoon: true }],
+          links: [{ label: 'Upper back stretching guide', to: '/cards/stretch' }],
         },
         {
           title: 'Activation',
           body: 'A short activation session mid-day focusing on scapular setting. Pull out your activation card from your deck.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Movement cards', to: '/cards/move' }],
         },
       ]}
       workSmarterItems={[

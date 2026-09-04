@@ -11,7 +11,7 @@ export default function PainLowerEndDay() {
         {
           title: 'Move — start here',
           body: 'Your spine needs to be unloaded regularly. Set a timer for every 30-45 minutes. When it goes off, stand up and do a movement card from your deck. A 2-minute walk resets the load on the discs and lets the supporting muscles recover.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Movement cards', to: '/cards/move' }],
         },
         {
           title: 'Soft tissue release — peanut ball',
@@ -21,17 +21,17 @@ export default function PainLowerEndDay() {
         {
           title: 'Thoracic mobility',
           body: 'Your thoracic spine has a direct influence on how your lower back loads. When it\'s stiff, the lumbar spine compensates. Use your BackMagic at lunch and follow the thoracic mobility drills from your card deck.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', comingSoon: true }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
         },
         {
           title: 'Stretching',
           body: 'Hip flexors, piriformis, quads. Mid-afternoon when load has been building.',
-          links: [{ label: 'Lower back stretching guide', comingSoon: true }],
+          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch' }],
         },
         {
           title: 'Activation',
           body: 'A short activation session mid-day primes the muscles before afternoon fatigue sets in. Pull out your activation card from your deck.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Activation cards', to: '/cards/activate' }],
         },
       ]}
       workSmarterItems={[

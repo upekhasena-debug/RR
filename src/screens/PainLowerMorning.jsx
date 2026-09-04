@@ -11,7 +11,7 @@ export default function PainLowerMorning() {
         {
           title: 'Move first — and be mindful before bending',
           body: 'Before you open anything, do a morning movement card from your deck. Gentle movements — hip circles, standing back bends, a short walk. Where possible, give your spine 20-30 minutes of upright movement before you sit down.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Movement cards', to: '/cards/move' }],
         },
         {
           title: 'Heat patch — before you start',
@@ -26,22 +26,22 @@ export default function PainLowerMorning() {
         {
           title: 'Thoracic mobility',
           body: 'Your thoracic spine has a direct influence on how your lower back loads. Work through your thoracic mobility drills from your card deck before you sit down. BackMagic is best used mid-morning once you\'ve warmed up — not first thing.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', comingSoon: true }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
         },
         {
           title: 'Cobra extensions — if they feel comfortable',
           body: 'Lie face down, place hands under your shoulders and gently press up into a cobra or prone extension. Hold for a few seconds, lower, repeat 10 times. If this eases your symptoms, do it before you sit down every morning. If it increases pain or causes leg symptoms, stop.',
-          links: [{ label: 'Extension exercises guide', comingSoon: true }],
+          links: [{ label: 'Extension exercises guide', to: '/cards/stretch/stretch-23' }],
         },
         {
           title: 'Stretching',
           body: 'Hip flexors, piriformis, quads. Before your first sitting session.',
-          links: [{ label: 'Lower back stretching guide', comingSoon: true }],
+          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch' }],
         },
         {
           title: 'Activation',
           body: 'A short activation session before your first sitting session primes the muscles before you load them. Pull out your activation card from your deck.',
-          links: [{ label: 'Movement cards', comingSoon: true }],
+          links: [{ label: 'Activation cards', to: '/cards/activate' }],
         },
       ]}
       workSmarterItems={[
