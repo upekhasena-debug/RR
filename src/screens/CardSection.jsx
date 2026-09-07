@@ -36,16 +36,29 @@ export default function CardSection() {
   return (
     <div style={{ flex: 1, overflowY: 'auto', paddingBottom: 80 }}>
       {/* Colour header */}
-      <div style={{ background: section.color, padding: '16px 16px 20px' }}>
-        <div style={{ fontSize: '0.7rem', fontWeight: 800, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>
-          Card deck
+      <div style={{ background: section.color, position: 'relative', overflow: 'hidden' }}>
+        {section.image && (
+          <img
+            src={section.image}
+            alt={section.title}
+            style={{
+              position: 'absolute', top: 0, right: 0, height: '100%', width: '45%',
+              objectFit: 'cover', objectPosition: 'center top',
+              opacity: 0.35,
+            }}
+          />
+        )}
+        <div style={{ position: 'relative', padding: '16px 16px 20px' }}>
+          <div style={{ fontSize: '0.7rem', fontWeight: 800, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>
+            Card deck
+          </div>
+          <h1 style={{ fontSize: '1.5rem', fontWeight: 900, color: 'white', margin: 0, lineHeight: 1.2 }}>
+            {section.title}
+          </h1>
+          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.85rem', lineHeight: 1.5, margin: '8px 0 0' }}>
+            {section.intro}
+          </p>
         </div>
-        <h1 style={{ fontSize: '1.5rem', fontWeight: 900, color: 'white', margin: 0, lineHeight: 1.2 }}>
-          {section.title}
-        </h1>
-        <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.85rem', lineHeight: 1.5, margin: '8px 0 0' }}>
-          {section.intro}
-        </p>
       </div>
 
       <div style={{ padding: '16px 16px 0' }}>

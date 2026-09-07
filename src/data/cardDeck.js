@@ -3,13 +3,14 @@ export const cardDeck = {
     id: 'move',
     title: 'Move',
     color: '#EF4136',
+    image: '/illustrations/section-move.png',
     intro: 'Whole body movement breaks. Every 30–45 minutes. No excuses.',
     cards: [
       { id: 'move-1', title: 'March on the Spot', area: 'Whole body', instructions: ['Drive your knees up to hip height', 'Keep going — don\'t slow down', '1 minute. Don\'t stop.'], duration: '1 minute' },
       { id: 'move-2', title: 'Walk and Squat', area: 'Whole body', instructions: ['Get up and walk to get some water', '10 air squats before you come back', 'GO.'], duration: '2 minutes' },
       { id: 'move-3', title: 'Lunges on the Spot', area: 'Whole body', instructions: ['Arms overhead', 'Big slow lunge steps alternating legs', '10 reps each side'], duration: '2 minutes' },
       { id: 'move-4', title: 'Take the Stairs', area: 'Whole body', instructions: ['Up or down a flight twice', 'No lift allowed'], duration: '3 minutes' },
-      { id: 'move-5', title: 'Star Jumps', area: 'Whole body', instructions: ['1 minute', 'Keep going'], duration: '1 minute' },
+      { id: 'move-5', title: 'Star Jumps', area: 'Whole body', instructions: ['1 minute', 'Keep going'], duration: '1 minute', image: '/illustrations/card-star-jumps.png' },
       { id: 'move-6', title: 'Bag Sit to Stand', area: 'Whole body', instructions: ['Grab your bag', 'Hold it to your chest', 'Stand up and sit down 15 times'], duration: '2 minutes' },
       { id: 'move-7', title: 'Wall Sit', area: 'Whole body', instructions: ['Slide down until knees at 90 degrees', 'Hold 45 seconds', 'Don\'t give up'], duration: '45 seconds' },
       { id: 'move-8', title: 'Calf Raises', area: 'Whole body', instructions: ['Up on your toes', 'Lower slowly', '20 reps. Don\'t rush.'], duration: '2 minutes' },
@@ -22,14 +23,15 @@ export const cardDeck = {
   activate: {
     id: 'activate',
     title: 'Activate',
-    color: '#2E86AB',
+    color: '#C8893A',
+    image: '/illustrations/section-activate.png',
     intro: 'Switch the right muscles on before you load them.',
     disclaimerCard: {
       title: 'Before You Start — Lower Back',
       content: 'Rule 1: Keep breathing — normal breath, upper tummy relaxed, breathe into bottom of lungs. Rule 2: Neutral spine — natural inward curve, small gap between lower back and floor. Reset if lost. These are activation exercises — switching the right muscles on, not grinding through reps.',
     },
     cards: [
-      { id: 'activate-1', title: 'Chin Retraction with Nodding', area: 'Neck and head', instructions: ['Sit tall', 'Pull chin straight back — not down, back', 'Keep it there', 'Slowly nod yes — small movement only', 'Reset if chin drifts forward'], reps: '10 reps', duration: '2 minutes' },
+      { id: 'activate-1', title: 'Chin Retraction with Nodding', image: '/illustrations/card-chin-retraction.png', area: 'Neck and head', instructions: ['Sit tall', 'Pull chin straight back — not down, back', 'Keep it there', 'Slowly nod yes — small movement only', 'Reset if chin drifts forward'], reps: '10 reps', duration: '2 minutes' },
       { id: 'activate-2', title: 'Chin Retraction with Nodding and Rotation — Theraband', area: 'Neck and head', instructions: ['Loop Theraband around back of head, hold ends at chest', 'Pull chin back against band', 'Slowly nod yes — 10 reps, chin stays back', 'Slowly rotate left and right — 10 reps each way', 'Chin stays back throughout — reset if it drifts'], reps: '10 reps each movement', duration: '3 minutes' },
       { id: 'activate-3', title: 'Four Point Kneeling Chin Retraction with Nodding and Rotation', area: 'Neck and head', instructions: ['On hands and knees — wrists under shoulders, knees under hips', 'Let your head hang naturally', 'Pull chin straight back — not up, back', 'Slowly nod yes — 10 reps, chin stays back', 'Slowly rotate left and right — 10 reps each way'], reps: '10 reps each movement', duration: '3 minutes' },
       { id: 'activate-4', title: 'Theraband Pull Apart', area: 'Upper back and shoulders', instructions: ['Sit or stand tall', 'Hold Theraband in both hands, arms in front at roughly shoulder height', 'Pull band apart — leading with your elbows', 'Squeeze shoulder blades together at end range', 'Slowly return to start'], reps: '15 reps', duration: '2 minutes' },
@@ -50,7 +52,8 @@ export const cardDeck = {
   stretch: {
     id: 'stretch',
     title: 'Stretch and Mobilise',
-    color: '#7B2D8B',
+    color: '#2E7D7B',
+    image: '/illustrations/section-stretch.png',
     intro: 'Release what sitting tightens. Move what sitting stiffens.',
     globalDisclaimer: 'Comfortable during and after. Gentle pulling = normal. Pain or symptoms into arm or leg = stop. Soft tissue stretches: 30 second holds, 3–5 times. Mobility drills: 8 slow reps, coordinated with breath.',
     cards: [
@@ -72,7 +75,7 @@ export const cardDeck = {
       { id: 'stretch-16', title: 'Piriformis Stretch', area: 'Lower back', instructions: ['Seated option: sit tall at edge of chair, cross right ankle over left knee (figure 4), hinge gently forward from hips, feel stretch in right glute', 'Supine option: lie on back, both knees bent, cross right ankle over left knee, lift left foot off floor, reach through and hold back of left thigh, draw toward chest', 'Use whichever position you have space for', 'Switch sides'], reps: '30 seconds each side, 3–5 times', duration: '3 minutes' },
       { id: 'stretch-17', title: 'Quad Stretch', area: 'Lower back', instructions: ['Stand near wall for balance if needed', 'Bend right knee — hold ankle behind you', 'Keep knees together', 'Tuck tailbone under slightly', 'Stand tall — feel stretch down front of thigh', 'Switch sides'], reps: '30 seconds each side, 3–5 times', duration: '2 minutes', note: 'If you can\'t reach your ankle — loop a Theraband around your foot and hold the ends.' },
       { id: 'stretch-18', title: 'QL Stretch', area: 'Lower back', instructions: ['Stand with feet hip width apart', 'Reach right arm up and overhead', 'Side bend slowly to the left — reaching right arm up and over', 'Feel stretch along right side of lower back into ribcage', 'Hold — breathe into the right side', 'Switch sides'], reps: '30 seconds each side, 3–5 times', duration: '2 minutes', note: 'Keep both feet grounded and hips square.' },
-      { id: 'stretch-19', title: 'Hamstring Stretch', area: 'Lower back', instructions: ['Sit at edge of chair, one leg extended straight in front', 'Keep back straight — don\'t round forward', 'Hinge from hips — lean forward until you feel stretch down back of thigh', 'Hold — breathe normally', 'Switch sides'], reps: '30 seconds each side, 3–5 times', duration: '2 minutes', note: 'The hinge comes from your hips — not your lower back rounding. Keep your chest up.' },
+      { id: 'stretch-19', title: 'Hamstring Stretch', area: 'Lower back', instructions: ['Sit at edge of chair, one leg extended straight in front', 'Keep back straight — don\'t round forward', 'Hinge from hips — lean forward until you feel stretch down back of thigh', 'Hold — breathe normally', 'Switch sides'], reps: '30 seconds each side, 3–5 times', duration: '2 minutes', note: 'The hinge comes from your hips — not your lower back rounding. Keep your chest up.', image: '/illustrations/card-hamstring-stretch.png' },
       { id: 'stretch-20', title: 'Glute Stretch', area: 'Lower back', instructions: ['Sit tall at edge of chair', 'Cross right ankle over left knee — figure 4 position', 'Sit tall — don\'t round lower back', 'Hinge forward gently from hips until you feel stretch in right glute', 'Hold — breathe into right glute', 'Switch sides'], reps: '30 seconds each side, 3–5 times', duration: '2 minutes', note: 'The more upright your spine — the deeper the stretch.' },
       { id: 'stretch-21', title: 'Spinal Flexion Stretch', area: 'Lower back', instructions: ['Seated option: sit at edge of chair, feet flat, let hands drop between knees, slowly curl forward rounding from lower back upward, head drops heavy, take 3 deep breaths at bottom, slowly uncurl back up one vertebra at a time', 'Supine option: lie on back, bring both knees toward chest, hold behind thighs, gently rock side to side, hold and breathe into lower back', 'Use whichever position you have space for'], reps: '8 slow reps seated / 30 seconds supine, 3–5 times', duration: '3 minutes' },
       { id: 'stretch-22', title: 'Lumbar Rotation', area: 'Lower back', instructions: ['Seated option: sit tall, cross right leg over left, rotate toward right, right hand on outside of right knee for gentle assist, hold and breathe, switch sides', 'Supine option: lie on back, both knees bent, let both knees drop slowly to one side, arms out for stability, hold and breathe into lower back, return to centre, alternate sides', 'Use whichever position you have space for'], reps: '30 seconds each side seated / 8 slow reps each side supine', duration: '3 minutes' },
@@ -90,7 +93,8 @@ export const cardDeck = {
   strengthen: {
     id: 'strengthen',
     title: 'Strengthen',
-    color: '#E07B39',
+    color: '#282828',
+    image: '/illustrations/section-strengthen.png',
     intro: 'Build what desk work breaks down. Five minutes a day is enough.',
     disclaimerCard: {
       title: 'Before You Start',
@@ -101,7 +105,7 @@ export const cardDeck = {
       { id: 'strengthen-2', title: 'Isometric Neck Press — Four Directions', area: 'Neck and head', instructions: ['Sit tall', 'Place palm against forehead', 'Build up pressure gradually over 2 seconds until pushing at maximum effort — head doesn\'t move', 'Hold at max effort for 5 seconds', 'Ease off gradually — don\'t just let go', 'Repeat at back of head, then each side'], reps: '5 reps each direction, 2 sets', duration: '4 minutes', note: 'Unlike the rest of this section, this is a genuine max effort — build up, hold hard, ease off.' },
       { id: 'strengthen-3', title: 'Prone Y-Raise with Resistance', area: 'Neck and head', instructions: ['Lie face down, forehead supported', 'Arms in Y shape, thumbs up', 'Chin gently tucked throughout', 'Lift arms a few centimetres off the floor, squeezing shoulder blades down and in', 'Hold 3 seconds', 'Lower slowly'], reps: '10 reps, 3 sets', duration: '3 minutes' },
       { id: 'strengthen-4', title: 'Theraband Row with Chin Retraction', area: 'Neck and head', instructions: ['Anchor band at chest height', 'Chin retracted and held throughout', 'Pull elbows straight back, squeezing shoulder blades together', 'Hold 2 seconds at end range', 'Return slowly'], reps: '12 reps, 3 sets', duration: '3 minutes', note: 'If your chin creeps forward, the set is over.' },
-      { id: 'strengthen-5', title: 'Theraband Row', area: 'Upper back and shoulders', instructions: ['Anchor band at chest height', 'Arms extended forward, slight bend in elbows', 'Pull elbows straight back close to your sides', 'Squeeze shoulder blades together', 'Hold 2 seconds at end range', 'Return slowly'], reps: '12 reps, 3 sets', duration: '3 minutes' },
+      { id: 'strengthen-5', title: 'Theraband Row', area: 'Upper back and shoulders', instructions: ['Anchor band at chest height', 'Arms extended forward, slight bend in elbows', 'Pull elbows straight back close to your sides', 'Squeeze shoulder blades together', 'Hold 2 seconds at end range', 'Return slowly'], reps: '12 reps, 3 sets', duration: '3 minutes', image: '/illustrations/card-theraband-row.png' },
       { id: 'strengthen-6', title: 'Standing Y-Raise with Resistance', area: 'Upper back and shoulders', instructions: ['Stand on band, hold ends', 'Hinge slightly forward from hips', 'Raise arms in Y shape, thumbs leading, to shoulder height', 'Lower slowly'], reps: '10 reps, 3 sets', duration: '3 minutes' },
       { id: 'strengthen-7', title: 'Shoulder External Rotation', area: 'Upper back and shoulders', instructions: ['Elbow tucked into your side, bent to 90 degrees', 'Band anchored at elbow height in front', 'Rotate forearm outward — elbow stays glued to ribs', 'Hold 2 seconds at end range', 'Return slowly', 'Switch sides'], reps: '10 reps each side, 3 sets', duration: '3 minutes' },
       { id: 'strengthen-8', title: 'Serratus Punch', area: 'Upper back and shoulders', instructions: ['Lie on back or stand, band anchored behind at chest height', 'Arms extended forward at shoulder height', 'Punch forward a few extra centimetres — protracting the shoulder blade', 'Hold 2 seconds', 'Return slowly', 'Switch sides'], reps: '10 reps each side, 3 sets', duration: '3 minutes' },
@@ -123,7 +127,8 @@ export const cardDeck = {
   benchmark: {
     id: 'benchmark',
     title: 'Benchmark',
-    color: '#2C2C2A',
+    color: '#6B5B9E',
+    image: '/illustrations/section-benchmark.png',
     intro: 'Find out where you\'re starting from. Log it. Retest in two weeks.',
     introCard: {
       title: 'Before You Test',
@@ -131,7 +136,7 @@ export const cardDeck = {
     },
     cards: [
       { id: 'benchmark-1', title: 'Deep Neck Flexor Endurance', area: 'Neck and head', instructions: ['Lie on your back, knees bent', 'Tuck chin, lift head slightly off the floor — just enough to slide a hand underneath', 'Hold as long as you can with good form', 'Stop when chin pokes forward or head presses back down'], benchmark: 'Average hold: women ~30s, men ~39s. People with neck pain average ~21s.', source: 'Domenech et al. PM&R. 2011.', timer: { type: 'hold', storageKey: 'rr_benchmark_neck' } },
-      { id: 'benchmark-2', title: 'Front Plank Hold', area: 'Lower back and core', instructions: ['Forearms and toes on the floor', 'Straight line from head to heels', 'Hold as long as you can with good form', 'Stop when hips sag or lift'], benchmark: 'Average hold: women ~72s, men ~110s. People with lower back pain average ~50s. Cap the test at 2 minutes.', source: 'McGill S. Low Back Disorders. 2015.', timer: { type: 'hold', storageKey: 'rr_benchmark_plank' } },
+      { id: 'benchmark-2', title: 'Front Plank Hold', area: 'Lower back and core', instructions: ['Forearms and toes on the floor', 'Straight line from head to heels', 'Hold as long as you can with good form', 'Stop when hips sag or lift'], benchmark: 'Average hold: women ~72s, men ~110s. People with lower back pain average ~50s. Cap the test at 2 minutes.', source: 'McGill S. Low Back Disorders. 2015.', timer: { type: 'hold', storageKey: 'rr_benchmark_plank' }, image: '/illustrations/card-front-plank-hold.png' },
       { id: 'benchmark-3', title: 'Side Plank Hold', area: 'Lower back and core', instructions: ['Forearm and feet on the floor, hips lifted', 'Straight line from head to feet', 'Hold as long as you can', 'Test both sides'], benchmark: 'Average hold: women ~72s, men ~94s. A difference of more than 10 seconds between sides is worth addressing.', source: 'McGill SM. 1998. Leetun et al. Med Sci Sports Exerc. 2004.', timer: { type: 'sided', mode: 'hold', leftKey: 'rr_benchmark_sideplank_left', rightKey: 'rr_benchmark_sideplank_right', leftLabel: 'Left side', rightLabel: 'Right side', threshold: 10 } },
       { id: 'benchmark-4', title: 'Single Leg Balance, Eyes Closed', area: 'Whole body', instructions: ['Stand on one leg, hands on hips, eyes closed', 'Time until you touch your other foot down or open your eyes', 'Best of 3 trials', 'Test both sides'], benchmark: 'Average: ages 18–39 ~15s, ages 40–49 ~13s. Ages 50+: test with eyes open first — aim for 30+ seconds before attempting eyes closed.', source: 'Springer et al. Journal of Geriatric Physical Therapy. 2007. n=549.', timer: { type: 'sided', mode: 'bestof3', leftKey: 'rr_benchmark_balance_left', rightKey: 'rr_benchmark_balance_right', leftLabel: 'Left leg — best of 3', rightLabel: 'Right leg — best of 3', threshold: 4, thresholdMsg: 'There\'s a gap between sides worth paying attention to (more than 4 seconds)' } },
       { id: 'benchmark-5', title: 'Sit to Stand', area: 'Lower body strength', instructions: ['Standard chair — seat height around 43–44cm. Chair height significantly affects the result.', 'Arms crossed over chest — no pushing off', 'Stand fully upright, sit back down with control — that\'s one rep', 'Start with both legs — count how many in 1 minute', 'If you hit the benchmark — retest on a single leg'], benchmark: 'Double leg: 30s–40s age group aim for 35+ reps, 50s aim for 30+ reps, 60s+ aim for 23+ reps. Single leg: 23+ reps = solid functional lower limb strength.', source: 'Culvenor et al. 2016.', timer: { type: 'sts', repsKey: 'rr_benchmark_sts_double', leftKey: 'rr_benchmark_sts_left', rightKey: 'rr_benchmark_sts_right' } },

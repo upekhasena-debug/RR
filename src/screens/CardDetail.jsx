@@ -61,16 +61,31 @@ export default function CardDetail() {
 
   return (
     <div style={{ flex: 1, overflowY: 'auto', paddingBottom: 80 }}>
-      {/* Coloured header strip */}
-      <div style={{ background: section.color, padding: '12px 16px 14px' }}>
-        <span style={{
-          background: 'rgba(255,255,255,0.25)', color: 'white',
-          fontSize: '0.65rem', fontWeight: 800,
-          textTransform: 'uppercase', letterSpacing: '0.07em',
-          padding: '3px 8px', borderRadius: 20,
-        }}>
-          {card.area}
-        </span>
+      {/* Coloured header strip — expands to show illustration if available */}
+      <div style={{ background: section.color, position: 'relative', overflow: 'hidden' }}>
+        {card.image && (
+          <img
+            src={card.image}
+            alt={card.title}
+            style={{
+              width: '100%',
+              maxHeight: 220,
+              objectFit: 'cover',
+              objectPosition: 'center top',
+              display: 'block',
+            }}
+          />
+        )}
+        <div style={{ padding: card.image ? '10px 16px 14px' : '12px 16px 14px' }}>
+          <span style={{
+            background: 'rgba(255,255,255,0.25)', color: 'white',
+            fontSize: '0.65rem', fontWeight: 800,
+            textTransform: 'uppercase', letterSpacing: '0.07em',
+            padding: '3px 8px', borderRadius: 20,
+          }}>
+            {card.area}
+          </span>
+        </div>
       </div>
 
       <div style={{ padding: '16px 16px' }}>

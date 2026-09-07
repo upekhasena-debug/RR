@@ -31,12 +31,21 @@ export default function CardDeckHome() {
               style={{
                 display: 'flex', alignItems: 'center', gap: 14,
                 background: '#FFFFFF', border: '1px solid #E0DED8',
-                borderRadius: 14, padding: '16px 16px',
+                borderRadius: 14, padding: '12px 14px 12px 0',
                 cursor: 'pointer', textAlign: 'left',
                 borderLeft: `5px solid ${section.color}`,
+                overflow: 'hidden',
               }}
             >
-              <span style={{ fontSize: '1.6rem', flexShrink: 0 }}>{s.emoji}</span>
+              {section.image ? (
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  style={{ width: 72, height: 72, objectFit: 'cover', flexShrink: 0, borderRadius: '0 6px 6px 0' }}
+                />
+              ) : (
+                <span style={{ fontSize: '1.6rem', flexShrink: 0, paddingLeft: 14 }}>{s.emoji}</span>
+              )}
               <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 900, fontSize: '1rem', color: '#2C2C2A', marginBottom: 2 }}>
                   {section.title}
@@ -44,7 +53,7 @@ export default function CardDeckHome() {
                 <div style={{ fontSize: '0.78rem', color: '#5F5E5A', lineHeight: 1.4 }}>{s.desc}</div>
                 <div style={{ fontSize: '0.7rem', color: '#888780', marginTop: 4 }}>{cardCount} cards</div>
               </div>
-              <span style={{ color: section.color, fontSize: '1.2rem', fontWeight: 900, flexShrink: 0 }}>›</span>
+              <span style={{ color: section.color, fontSize: '1.2rem', fontWeight: 900, flexShrink: 0, paddingRight: 4 }}>›</span>
             </button>
           )
         })}
