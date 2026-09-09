@@ -69,9 +69,6 @@ export default function CardDetail() {
             alt={card.title}
             style={{
               width: '100%',
-              maxHeight: 220,
-              objectFit: 'cover',
-              objectPosition: 'center top',
               display: 'block',
             }}
           />
