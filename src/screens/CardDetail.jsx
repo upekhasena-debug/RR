@@ -61,13 +61,15 @@ export default function CardDetail() {
 
   return (
     <div style={{ flex: 1, overflowY: 'auto', paddingBottom: 80 }}>
-      {/* Illustration — full width, no coloured wrapper */}
+      {/* Illustration — crop to top ~65% to show just the artwork, not the baked-in card text */}
       {card.image ? (
-        <img
-          src={card.image}
-          alt={card.title}
-          style={{ width: '100%', display: 'block' }}
-        />
+        <div style={{ width: '100%', paddingBottom: '65%', position: 'relative', overflow: 'hidden' }}>
+          <img
+            src={card.image}
+            alt={card.title}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', display: 'block' }}
+          />
+        </div>
       ) : (
         /* Coloured header strip for cards without an illustration */
         <div style={{ background: section.color, padding: '12px 16px 14px' }}>
