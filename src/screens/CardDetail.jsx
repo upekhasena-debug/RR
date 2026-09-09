@@ -61,19 +61,16 @@ export default function CardDetail() {
 
   return (
     <div style={{ flex: 1, overflowY: 'auto', paddingBottom: 80 }}>
-      {/* Coloured header strip — expands to show illustration if available */}
-      <div style={{ background: section.color, position: 'relative', overflow: 'hidden' }}>
-        {card.image && (
-          <img
-            src={card.image}
-            alt={card.title}
-            style={{
-              width: '100%',
-              display: 'block',
-            }}
-          />
-        )}
-        <div style={{ padding: card.image ? '10px 16px 14px' : '12px 16px 14px' }}>
+      {/* Illustration — full width, no coloured wrapper */}
+      {card.image ? (
+        <img
+          src={card.image}
+          alt={card.title}
+          style={{ width: '100%', display: 'block' }}
+        />
+      ) : (
+        /* Coloured header strip for cards without an illustration */
+        <div style={{ background: section.color, padding: '12px 16px 14px' }}>
           <span style={{
             background: 'rgba(255,255,255,0.25)', color: 'white',
             fontSize: '0.65rem', fontWeight: 800,
@@ -83,9 +80,24 @@ export default function CardDetail() {
             {card.area}
           </span>
         </div>
-      </div>
+      )}
 
       <div style={{ padding: '16px 16px' }}>
+        {/* Area tag — shown here when card has an illustration */}
+        {card.image && (
+          <span style={{
+            display: 'inline-block',
+            background: section.color + '20',
+            color: section.color,
+            fontSize: '0.65rem', fontWeight: 800,
+            textTransform: 'uppercase', letterSpacing: '0.07em',
+            padding: '3px 8px', borderRadius: 20,
+            marginBottom: 10,
+          }}>
+            {card.area}
+          </span>
+        )}
+
         {/* Card title */}
         <h1 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#2C2C2A', lineHeight: 1.3, marginBottom: 16 }}>
           {card.title}
