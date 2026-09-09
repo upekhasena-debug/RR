@@ -63,11 +63,9 @@ export default function App() {
     '/tracker': 'Daily check-in',
     '/products': 'Your products',
     '/recheck': 'Quick check',
-    '/cards': 'Card deck',
   }
 
-  const screenTitle = staticTitles[location.pathname] ||
-    (location.pathname.startsWith('/cards/') ? 'Card deck' : undefined)
+  const screenTitle = staticTitles[location.pathname]
 
   return (
     <SafetyGuard>
