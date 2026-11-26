@@ -26,7 +26,7 @@ export default function PainLowerMorning() {
         {
           title: 'Thoracic mobility',
           body: 'Your thoracic spine has a direct influence on how your lower back loads. Work through your thoracic mobility drills from your card deck before you sit down. BackMagic is best used mid-morning once you\'ve warmed up — not first thing.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch?area=Lower back' }],
         },
         {
           title: 'Cobra extensions — if they feel comfortable',
@@ -36,12 +36,12 @@ export default function PainLowerMorning() {
         {
           title: 'Stretching',
           body: 'Hip flexors, piriformis, quads. Before your first sitting session.',
-          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch' }],
+          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch?area=Lower back' }],
         },
         {
           title: 'Activation',
           body: 'A short activation session before your first sitting session primes the muscles before you load them. Pull out your activation card from your deck.',
-          links: [{ label: 'Activation cards', to: '/cards/activate' }],
+          links: [{ label: 'Activation cards', to: '/cards/activate?area=Lower back' }],
         },
       ]}
       workSmarterItems={[

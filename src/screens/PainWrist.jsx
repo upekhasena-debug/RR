@@ -18,12 +18,12 @@ Most people type with their wrists slightly extended or deviated without realisi
         {
           title: 'Soft tissue release',
           body: 'Outer forearm from elbow to wrist, inner forearm, and around the wrist. Slow movements, moderate pressure, pause on tender spots for 20-30 seconds.',
-          links: [{ label: 'Forearm release guide', to: '/cards/activate' }],
+          links: [{ label: 'Forearm release guide', to: '/cards/activate?area=Wrist and forearm' }],
         },
         {
           title: 'Stretching',
           body: 'Prayer stretch: palms together, lower hands until you feel a forearm stretch. Hold 20-30 seconds. Reverse prayer: backs of hands together, raise them. Hold 20-30 seconds. Wrist circles: 10 each direction, both hands. Every hour.',
-          links: [{ label: 'Wrist and forearm stretching guide', to: '/cards/stretch' }],
+          links: [{ label: 'Wrist and forearm stretching guide', to: '/cards/stretch?area=Wrist and forearm' }],
         },
         {
           title: 'Wrist neutraliser pad',

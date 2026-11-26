@@ -28,17 +28,17 @@ However — if any of the following apply, stop self-managing and see a physio o
         {
           title: 'Thoracic mobility',
           body: 'BackMagic daily at lunch without exception, and thoracic mobility drills from your card deck every morning before you sit.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch?area=Lower back' }],
         },
         {
           title: 'Stretching',
           body: 'Hip flexors, piriformis, quads. Daily — morning before you sit and mid-afternoon.',
-          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch' }],
+          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch?area=Lower back' }],
         },
         {
           title: 'Activation',
           body: 'Before your first sitting session, every morning. Not optional at this level — the muscles need to be switched on before they\'re loaded.',
-          links: [{ label: 'Activation cards', to: '/cards/activate' }],
+          links: [{ label: 'Activation cards', to: '/cards/activate?area=Lower back' }],
         },
       ]}
       workSmarterItems={[

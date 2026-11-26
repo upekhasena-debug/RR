@@ -21,17 +21,17 @@ export default function PainLowerEndDay() {
         {
           title: 'Thoracic mobility',
           body: 'Your thoracic spine has a direct influence on how your lower back loads. When it\'s stiff, the lumbar spine compensates. Use your BackMagic at lunch and follow the thoracic mobility drills from your card deck.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch?area=Lower back' }],
         },
         {
           title: 'Stretching',
           body: 'Hip flexors, piriformis, quads. Mid-afternoon when load has been building.',
-          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch' }],
+          links: [{ label: 'Lower back stretching guide', to: '/cards/stretch?area=Lower back' }],
         },
         {
           title: 'Activation',
           body: 'A short activation session mid-day primes the muscles before afternoon fatigue sets in. Pull out your activation card from your deck.',
-          links: [{ label: 'Activation cards', to: '/cards/activate' }],
+          links: [{ label: 'Activation cards', to: '/cards/activate?area=Lower back' }],
         },
       ]}
       workSmarterItems={[
