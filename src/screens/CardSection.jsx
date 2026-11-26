@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { getSection } from '../data/cardDeck'
 
 function AreaTag({ area, color }) {
@@ -20,6 +20,7 @@ function AreaTag({ area, color }) {
 export default function CardSection() {
   const { sectionId } = useParams()
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const section = getSection(sectionId)
 
   if (!section) {
@@ -30,8 +31,19 @@ export default function CardSection() {
     )
   }
 
-  const mainCards = section.cards.filter(c => !c.isBonus)
-  const bonusCards = section.cards.filter(c => c.isBonus)
+  const area = searchParams.get('area')
+  const allMainCards = section.cards.filter(c => !c.isBonus)
+  const allBonusCards = section.cards.filter(c => c.isBonus)
+
+  // Filter to the relevant body area when one's been requested (e.g. arriving
+  // from a pain pathway). Falls back to showing everything if the filter
+  // would leave nothing to show, so a mismatched/unknown area never produces
+  // a blank screen.
+  const areaMainCards = area ? allMainCards.filter(c => c.area === area) : allMainCards
+  const areaBonusCards = area ? allBonusCards.filter(c => c.area === area) : allBonusCards
+  const isFiltered = area && (areaMainCards.length > 0 || areaBonusCards.length > 0)
+  const mainCards = isFiltered ? areaMainCards : allMainCards
+  const bonusCards = isFiltered ? areaBonusCards : allBonusCards
 
   return (
     <div style={{ flex: 1, overflowY: 'auto', paddingBottom: 80 }}>
@@ -44,6 +56,26 @@ export default function CardSection() {
           {section.intro}
         </p>
       </div>
+
+      {isFiltered && (
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10,
+          padding: '10px 16px', background: '#F7F6F2', borderBottom: '1px solid #E0DED8',
+        }}>
+          <span style={{ fontSize: '0.78rem', color: '#5F5E5A' }}>
+            Showing <strong>{area}</strong> cards
+          </span>
+          <button
+            onClick={() => navigate(`/cards/${sectionId}`)}
+            style={{
+              background: 'none', border: 'none', color: section.color,
+              fontWeight: 800, fontSize: '0.78rem', cursor: 'pointer', flexShrink: 0, padding: 0,
+            }}
+          >
+            View all →
+          </button>
+        </div>
+      )}
 
       <div style={{ padding: '16px 16px 0' }}>
         {/* Disclaimer / intro card */}

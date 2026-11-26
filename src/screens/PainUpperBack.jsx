@@ -23,17 +23,17 @@ The mechanism is a combination of sustained forward posture, rounded shoulders, 
         {
           title: 'Thoracic mobility',
           body: 'The thoracic spine is the primary driver of this presentation. A stiff thoracic spine is the reason the upper back and shoulders are overloaded. BackMagic at lunch is the most important thing in your box for this area. Thoracic mobility drills from your card deck daily.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch?area=Upper back and shoulders' }],
         },
         {
           title: 'Stretching',
           body: 'Priority order: pecs and pec minor first — doorframe stretch, or pec minor release against the ball. Then upper traps, scalenes.',
-          links: [{ label: 'Upper back stretching guide', to: '/cards/stretch' }],
+          links: [{ label: 'Upper back stretching guide', to: '/cards/stretch?area=Upper back and shoulders' }],
         },
         {
           title: 'Activation',
           body: 'A short activation session mid-day focusing on scapular setting. Pull out your activation card from your deck.',
-          links: [{ label: 'Movement cards', to: '/cards/move' }],
+          links: [{ label: 'Activation cards', to: '/cards/activate?area=Upper back and shoulders' }],
         },
       ]}
       workSmarterItems={[

@@ -35,17 +35,17 @@ The headaches this produces are cervicogenic — they originate in the neck and 
         {
           title: 'Thoracic mobility',
           body: 'Your thoracic spine directly influences your cervical spine. When the thoracic spine is stiff, the neck compensates. BackMagic at lunch, thoracic mobility drills from your card deck.',
-          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch' }],
+          links: [{ label: 'BackMagic guide', to: '/product/backmagic' }, { label: 'Thoracic mobility guide', to: '/cards/stretch?area=Neck and head' }],
         },
         {
           title: 'Stretching',
           body: 'Priority order: suboccipital release first, then scalenes, upper traps, pecs.',
-          links: [{ label: 'Neck and head stretching guide', to: '/cards/stretch' }],
+          links: [{ label: 'Neck and head stretching guide', to: '/cards/stretch?area=Neck and head' }],
         },
         {
           title: 'Activation — chin retractions',
           body: 'Gently pull your chin straight back — not down, back. Hold 2 seconds, release. 10 reps. Every hour. This reactivates the deep neck flexors that switch off under sustained forward head posture.',
-          links: [{ label: 'Activation cards', to: '/cards/activate' }],
+          links: [{ label: 'Activation cards', to: '/cards/activate?area=Neck and head' }],
         },
       ]}
       workSmarterItems={[
